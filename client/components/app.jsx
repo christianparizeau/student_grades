@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='container'>
-        <Header text='Student Grade Table'></Header>
+        <Header text='Student Grade Table' avgGrade={this.getAverageGrade()}></Header>
         <GradeTable grades={this.state.grades} />
       </div>
     );
