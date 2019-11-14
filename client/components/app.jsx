@@ -9,6 +9,12 @@ class App extends React.Component {
     };
   }
 
+  getAverageGrade() {
+    const gradeReducer = (acc, grade) => acc + grade.grade;
+    let gradeTotal = this.state.grades.reduce(gradeReducer);
+    return Math.round(gradeTotal / (this.state.grades.length));
+  }
+
   componentDidMount() {
     this.getAllGrades();
   }
