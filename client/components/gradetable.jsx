@@ -3,9 +3,14 @@ import Grade from './grade';
 function GradeTable(props) {
   let grades = props.grades;
   if (grades.length === 0) return 'No grades recorded';
+  let gradeElements = grades.map(grade => {
+    return (
+      <Grade grade={grade.grade} name={grade.name} key={grade.id} course={grade.course} />
+    );
+  });
   return (
-    <table className='table'>
-      <thead>
+    <table className='table table-hover'>
+      <thead className='thead-dark'>
         <tr>
           <th scope='col'>Name</th>
           <th scope='col'>Course</th>
@@ -13,7 +18,7 @@ function GradeTable(props) {
         </tr>
       </thead>
       <tbody>
-        <Grade name={grades[0].name} course={grades[0].course} grade={grades[0].grade} />
+        {gradeElements}
       </tbody>
     </table>
 
