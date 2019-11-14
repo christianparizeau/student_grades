@@ -5,7 +5,7 @@ function GradeTable(props) {
   if (grades.length === 0) return 'No grades recorded';
   let gradeElements = grades.map(grade => {
     return (
-      <Grade grade={grade.grade} name={grade.name} key={grade.id} course={grade.course} />
+      <Grade grade={grade} key={grade.id} />
     );
   });
   return (
