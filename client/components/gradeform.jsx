@@ -45,18 +45,21 @@ export default class GradeForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} className='col-4'>
         <input
+          className='form-control m-1'
           name="name"
           type="text"
           value={this.state.name}
           onChange={this.fieldChange}
           placeholder='Name' />
         <input
+          className='form-control m-1'
           name='course'
           type="text"
           value={this.state.course}
           onChange={this.fieldChange}
           placeholder='Course' />
         <input
+          className='form-control m-1'
           name="grade"
           type="number"
           placeholder="Grade"
