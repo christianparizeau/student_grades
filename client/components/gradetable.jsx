@@ -24,5 +24,4 @@ function GradeTable(props) {
 
   );
 }
-
 export default GradeTable;

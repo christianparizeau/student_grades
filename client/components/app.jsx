@@ -17,6 +17,24 @@ class App extends React.Component {
     return Math.round(gradeTotal / (this.state.grades.length));
   }
 
+  addStudent(grade) {
+    const req = {
+      'method': 'POST',
+      'body': JSON.stringify(grade),
+      'headers': {
+        'Content-Type': 'application/json'
+      }
+    };
+    fetch('/api/grades', req)
+      .then(res => res.json())
+      .then(() => {
+        let grades = [...this.state.grades];
+        grades.push(grade);
+        this.setState({ grades });
+      })
+      .catch(err => console.error(err));
+  }
+
   componentDidMount() {
     this.getAllGrades();
   }
