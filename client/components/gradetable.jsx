@@ -9,7 +9,7 @@ function GradeTable(props) {
     );
   });
   return (
-    <table className='table table-hover'>
+    <table className='table table-hover col-8'>
       <thead className='thead-dark'>
         <tr>
           <th scope='col'>Name</th>
@@ -24,5 +24,4 @@ function GradeTable(props) {
 
   );
 }
-
 export default GradeTable;
