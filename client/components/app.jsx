@@ -19,6 +19,14 @@ class App extends React.Component {
     return Math.round(gradeTotal / (this.state.grades.length));
   }
 
+  deleteStudent(id) {
+    fetch(`/api/grades/${id}`, { 'method': 'DELETE' })
+      .then(() => {
+        let grades = this.state.grades.filter(grade => grade.id !== id);
+        this.setState({ grades });
+      });
+  }
+
   addStudent(grade) {
     const req = {
       'method': 'POST',
