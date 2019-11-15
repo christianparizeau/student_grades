@@ -10,6 +10,7 @@ class App extends React.Component {
     };
     this.getAverageGrade = this.getAverageGrade.bind(this);
     this.addStudent = this.addStudent.bind(this);
+    this.deleteStudent = this.deleteStudent.bind(this);
   }
 
   getAverageGrade() {
@@ -63,7 +64,7 @@ class App extends React.Component {
       <div className='container'>
         <Header text='Student Grade Table' avgGrade={this.getAverageGrade()}></Header>
         <div className='row'>
-          <GradeTable grades={this.state.grades} />
+          <GradeTable grades={this.state.grades} deleteStudent={this.state.deleteStudent} />
           <GradeForm addStudent={this.addStudent} />
         </div>
       </div>
