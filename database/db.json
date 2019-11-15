@@ -17,6 +17,12 @@
       "course": "Web Development",
       "grade": 50,
       "id": 3
+    },
+    {
+      "name": "Pzo",
+      "course": "Setting State",
+      "grade": 100,
+      "id": 4
     }
   ]
 }
