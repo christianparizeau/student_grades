@@ -5,7 +5,7 @@ function GradeTable(props) {
   if (grades.length === 0) return 'No grades recorded';
   let gradeElements = grades.map(grade => {
     return (
-      <Grade grade={grade} key={grade.id} />
+      <Grade grade={grade} key={grade.id} deleteStudent={props.deleteStudent} />
     );
   });
   return (
@@ -15,6 +15,7 @@ function GradeTable(props) {
           <th scope='col'>Name</th>
           <th scope='col'>Course</th>
           <th scope='col'>Grade</th>
+          <th scope='col'>Operations</th>
         </tr>
       </thead>
       <tbody>

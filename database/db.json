@@ -2,33 +2,21 @@
   "grades": [
     {
       "name": "Dan Paschal",
-      "course": "Web Development",
+      "course": "Web Dev",
       "grade": 100,
       "id": 1
     },
     {
-      "name": "Scott Bowler",
-      "course": "Web Development",
-      "grade": 100,
+      "name": "Tim David",
+      "course": "Web Dev",
+      "grade": 50,
       "id": 2
     },
     {
-      "name": "Tim Davis",
-      "course": "Web Development",
-      "grade": 50,
-      "id": 3
-    },
-    {
-      "name": "Pzo",
-      "course": "Setting State",
+      "name": "Scott Bowler",
+      "course": "Web Dev",
       "grade": 100,
-      "id": 4
-    },
-    {
-      "name": "Pzo",
-      "course": "Spelling",
-      "grade": 25,
-      "id": 5
+      "id": 3
     }
   ]
 }
