@@ -44,30 +44,45 @@ export default class GradeForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className='col-4'>
-        <input
-          className='form-control m-1'
-          name="name"
-          type="text"
-          value={this.state.name}
-          onChange={this.fieldChange}
-          placeholder='Name' />
-        <input
-          className='form-control m-1'
-          name='course'
-          type="text"
-          value={this.state.course}
-          onChange={this.fieldChange}
-          placeholder='Course' />
-        <input
-          className='form-control m-1'
-          name="grade"
-          type="number"
-          placeholder="Grade"
-          value={this.state.grade}
-          onChange={this.fieldChange} />
+        <div className="input-group mb-2">
+          <div className="input-group-prepend">
+            <div className="input-group-text"><i className='fas fa-user-alt fa-fw'></i></div>
+          </div>
+          <input
+            className='form-control'
+            name="name"
+            type="text"
+            value={this.state.name}
+            onChange={this.fieldChange}
+            placeholder='Name' />
+        </div>
+        <div className="input-group mb-2">
+          <div className="input-group-prepend">
+            <div className="input-group-text"><i className="fas fa-book fa-fw"></i></div>
+          </div>
+          <input
+            className='form-control'
+            name='course'
+            type="text"
+            value={this.state.course}
+            onChange={this.fieldChange}
+            placeholder='Course' />
+        </div>
+        <div className="input-group mb-2">
+          <div className="input-group-prepend">
+            <div className="input-group-text"><i className="fas fa-graduation-cap fa-fw"></i></div>
+          </div>
+          <input
+            className='form-control'
+            name="grade"
+            type="number"
+            placeholder="Grade"
+            value={this.state.grade}
+            onChange={this.fieldChange} />
+        </div>
         <button className="btn btn-success m-1">Add</button>
         <button className="btn btn-danger m-1" onClick={this.clearFields}>Cancel</button>
-      </form>
+      </form >
     );
 
   }
